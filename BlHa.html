@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>0xM4LG4L4L</title>
+  <meta content="the blog of mohamed galal , where i write some challenges write-ups" name="description">
+  <link href="assets/img/m.gif" rel="icon">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- ################## -->
+  <!-- ################## -->
+  <!-- ################## -->
+  <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+</head>
+
+<body>
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Blackhat MEA CTF 2022</h3>
+          <p class="fst-italic">
+            My write-ups to all DIGITAL FORENSIC & REVERSE challenges in Blackhat MEA CTF 2022
+            <hr>
+          <div class="portfolio-wrap mt-4 mb-4">
+            <img src="assets/img/portfolio/2.jpg" class="img-fluid" alt="">
+          </div>
+          <hr>
+          In this CTF competition, we got 29th place after great work and speed in solving challenges
+          <hr>
+          <div class="portfolio-wrap mt-4 mb-4">
+            <img src="assets/img/BlHt/1.png" class="img-fluid" alt="">
+          </div>
+
+          </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-12">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>link of competition:</strong> <span><a
+                      href="https://ctf.sa/">https://ctf.sa/</a></span>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Bus</h3>
+          <p class="fst-italic">
+            We have established our communication protocol , and it is in testing phase . The message transmission is secure and can't be retrieved . It's up to you to tell us how secure it is .
+          </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>DIGITAL FORENSIC</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>easy</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>wireshark</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Solution</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+            <h3>steps : </h3>
+          </div>
+          <ul>
+            <li>the pcap file was look like that ( i use "Modbus" as a filter ) :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/2.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i notice some important points <br>
+              1- the protocol Modbus.data is always 0000 or ff00  <br>
+              2- the tcp destinion port is not constant and the massage sent to port = 502  :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/3.png" class="img-fluid" alt="">
+              </div>
+              <hr>
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/4.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>so i used tshark tool to get the data  :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/5.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i replace 0000 by 0 and ff00 by 1  :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/6.png" class="img-fluid" alt="">
+              </div>
+              <br>
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/7.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>then i used cyberchef  :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/8.png" class="img-fluid" alt="">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-12 col-md-12 mt-4 ">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+            <h3>Flag : BlackHatMEA{Modbus_is_easy_after_all!} </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>MEM</h3>
+          <p class="fst-italic">
+            My work PC has suddenly crashed . I can no longer retrieve my secret file , also I don't remember the password . It is a hard password and securely generated , but i saved it locally . Can you help me recover the content ?
+          </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>DIGITAL FORENSIC</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>Medium</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>Volatility </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Solution</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+            <h3>steps : </h3>
+          </div>
+          <ul>
+            <li>it is raw image so i used Volatility :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/9.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>then start to use some plugins </li>
+            <li>when i used filescan plugin , i found "flag.rar" :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/10.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>so i dumped it , but i cannot open it because it has password:
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/11.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>so i start to use some plugins to search for password , and i found it at "envars" plugin
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/12.png" class="img-fluid" alt="">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-12 col-md-12 mt-4 ">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+            <h3>Flag : BlackHatMEA{Password_hints_are_the_retrievable} </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>MEM</h3>
+          <p class="fst-italic">
+            My work PC has suddenly crashed . I can no longer retrieve my secret file , also I don't remember the password . It is a hard password and securely generated , but i saved it locally . Can you help me recover the content ?
+          </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>Reverse Engineering</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>easy</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>Flare VM </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Solution</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+            <h3>steps : </h3>
+          </div>
+          <ul>
+            <li>it is reg file so i used flare-vm :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/13.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i started by open reg file code  </li>
+            <li>I see some powershell scripts (the script add file with extension .exe in temp file and add value in registry) :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/14.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i go to temp location to see if there is any change before i merge the file and after
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/15.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>then i merge the file 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/16.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>then i go to registry to see the location which was in powershell script , and there was new registry in runOnce "startup_entry" 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/17.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>so i decide to restart the flare-vm 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/18.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i notice new file in temp location and it was with extension .exe 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/19.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>so i used Ida pro with this file
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/20.png" class="img-fluid" alt="">
+              </div>
+              <br>
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/21.png" class="img-fluid" alt="">
+              </div>
+              <br>
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/22.png" class="img-fluid" alt="">
+              </div>
+              <br>
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/23.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li> and i found the flag</li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-12 col-md-12 mt-4 ">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+            <h3>Flag : Flag{3mbed_ex3_1n_s3lf_3xecut1ng_r3g_f1le} </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>FinalGate</h3>
+          <p class="fst-italic">No Description </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>Reverse Engineering</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>mediun</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>Flare VM </span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Solution</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+            <h3>steps : </h3>
+          </div>
+          <ul>
+            <li>it is exe file so i used flare-vm :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/13.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>i started by open exports tab  </li>
+            <li>I see two TLScallback function so i open them :
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/24.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>I put two breakpoints to stop BeingDebugging in the first TLScallback 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/25.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>I put two breakpoints to Make result = true  in the second TLScallback 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/26.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>and in WinMain function I put two breakpoints to bypass the no argument
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/27.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>in first TLScallback we modify register value 
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/28.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>in second TLScallback we modify register value
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/29.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>but we get fake flag :(
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/30.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li>now let's bypass the no argument by set ip here
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/31.png" class="img-fluid" alt="">
+              </div>
+            </li>
+            <li> and i found the flag
+              <div class="portfolio-wrap mt-4 mb-4">
+                <img src="assets/img/BlHt/32.png" class="img-fluid" alt="">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="col-lg-12 col-md-12 mt-4 ">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+            <h3>Flag : Flag{p4s5ing_th3_g4te} </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+    <div class="about-me container">
+      <div class="row">
+        <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>Hope you know JS</h3>
+          <p class="fst-italic">no description</p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>Reverse Engineering</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>Hard</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Tools:</strong> <span>no tools</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interests container">
+      <div class="section-title">
+        <h2>Solution</h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="icon-box">
+            <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+            <h3>Solution Link : <a href="https://7rocky.github.io/en/ctf/other/hope-you-know-js/">https://7rocky.github.io/en/ctf/other/hope-you-know-js/</a> </h3>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-12 mt-4 ">
+          <div class="icon-box">
+            <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+            <h3>Flag : NO Flag </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="credits">
+    Designed by <a href="#">GalalHamoudy</a>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
