@@ -169,7 +169,144 @@
 
 
 
+    <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+      <div class="about-me container">
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>inter</h3>
+            <p class="fst-italic">
+              <img src="assets/img/cyctf/r2/99.png" class="img-fluid" alt="">
+            </p>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>Reverse</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>medium</span></li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="interests container">
+        <div class="section-title">
+          <h2>Solution</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="icon-box">
+              <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+              <h3>steps : </h3>
+            </div>
+            <ul>
+              <li>at the first I found the extension of file is .ll so i searched about it
+                <code>https://fileinfo.com/extension/ll</code>
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/1.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>then i opened the file , and realised that this code repeated many times :
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/2.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>so i checked the LLVM IR documentation <code> https://llvm.org/docs/LangRef.html</code>
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/3.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/4.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>and after many search and reading , i found that :
+
+                This code is written in LLVM IR, which is an intermediate representation language used by the LLVM
+                compiler infrastructure. The LLVM IR is a low-level, platform-independent assembly-like language that is
+                used as an intermediate step in the compilation process.
+
+                This particular code fragment is performing a load and some arithmetic operations on some pointers.
+                Here is a breakdown of what is happening:
+
+                <br><code> %4 = load ptr, ptr %3, align 8, !dbg !20</code><br>
+                This line loads a value from memory at the address pointed to by %3 with 8-byte alignment, and stores
+                the result in %4.
+
+                <br><code>%5 = getelementptr inbounds i8, ptr %4, i64 36, !dbg !20</code><br>
+                This line computes a new pointer that points to the 36th byte after the address pointed to by %4, and
+                stores the result in %5.
+
+                <br><code>%6 = load i8, ptr %5, align 1, !dbg !20</code><br>
+                This line loads a value from memory at the address pointed to by %5 with 1-byte alignment, and stores
+                the result in %6.
+
+                <br><code>%7 = sext i8 %6 to i32, !dbg !20</code><br>
+                This line sign-extends %6 from an 8-bit value to a 32-bit value, and stores the result in %7.
+
+                <br><code>%8 = sub nsw i32 %7, 31, !dbg !22</code><br>
+                This line subtracts the value 31 from %7 with no signed overflow, and stores the result in %8.
+
+                <br><code>%9 = icmp ne i32 %8, 20, !dbg !23</code><br>
+                This line compares %8 with the value 20 using a "not equal" comparison, and stores the result in %9.
+
+                <br><code>br i1 %9, label %10, label %11, !dbg !24</code><br>
+                This line performs a conditional branch based on the value of %9. If %9 is true (i.e. not equal to 20),
+                control is transferred to the label %10. Otherwise, control is transferred to the label %11.
+
+
+
+              </li>
+              <li>and from above i thought the 36th byte value is <code>x[36]-31=20</code> which mean
+                <code>x[36]=51</code> which equal to "3" from ascii
+
+
+
+              </li>
+              <li>and i know the flag start with "CyCTF" so i go to first byte "c"
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/6.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>and from above the value is <code>x[0]*24=1608</code> which mean <code>x[0]=67</code> which equal to
+                "C" from ascii
+              </li>
+              <li>and i know the flag start with "CyCTF" so i go to second byte "y"
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r2/5.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>and from above the value is <code>x[1]-28=93</code> which mean <code>x[1]=121</code> which equal to
+                "y" from ascii
+              </li>
+
+              <li>then i completed and get all the flag
+              </li>
+
+            </ul>
+
+          </div>
+          <div class="col-lg-12 col-md-12 mt-4 ">
+            <div class="icon-box">
+              <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+              <h3>Flag : CyCTF{R34D1NG_LLVM_1NT3RMED1AT3_R3PR3SENT4T10N_15_EZ}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
