@@ -309,7 +309,133 @@
     </div>
 
 
+    <div class="answer" style="background-color: #0000007a;margin: 10px 0px;padding: 30px 0px;">
+      <div class="about-me container">
+        <div class="row">
+          <div class="col-lg-12 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Bipolar</h3>
+            <p class="fst-italic">
+              <img src="assets/img/cyctf/r3/99.png" class="img-fluid" alt="">
+            </p>
+            <br>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Category:</strong> <span>Reverse</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Level:</strong> <span>hard</span></li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="interests container">
+        <div class="section-title">
+          <h2>Solution</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="icon-box">
+              <i class="ri-file-list-3-line" style="color: #ffbb2c;"></i>
+              <h3>steps : </h3>
+            </div>
+            <ul>
+              <li>at the first I did static analysis and opened the challenge file by Die , I realized that the file is packed:
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/1.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>so I searched for how to unpacked it , and i found this website <code> https://reverseengineering.stackexchange.com/questions/30545/how-do-i-unpack-a-file-protected-by-mpress </code>
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/2.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>and this was the steps to unpacked the file  :
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/3.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>so I followed the steps and unpacked the file successfully
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/4.jpg" class="img-fluid" alt="">
+                </div>
+                
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/5.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>then i opened unpacked file with ida and opened the strings window , and i found this
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/6.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>then i started to follow this string , and went to <code> sub_140001000 </code>
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/7.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+
+              <li>in <code> sub_140001000 </code> i found that :
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/8.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+              <li>so i tried to take this repeated text and turn it into 0 and 1
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/9.jpg" class="img-fluid" alt="">
+                </div>
+                
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/10.jpg" class="img-fluid" alt="">
+                </div>
+                
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/11.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+
+              <li>at last i used cyberchef to turn it from binary , and i get the flag
+
+                <div class="portfolio-wrap mt-4 mb-4">
+                  <img src="assets/img/cyctf/r3/12.jpg" class="img-fluid" alt="">
+                </div>
+
+              </li>
+
+
+
+
+            </ul>
+
+          </div>
+          <div class="col-lg-12 col-md-12 mt-4 ">
+            <div class="icon-box">
+              <i class="ri-price-tag-2-line" style="color: #e361ff;"></i>
+              <h3>Flag : CyCTF{C0ND1TION_B4S3D_B1NRY_ENC0D3D_57R1NGS_4_TH3_W1N}
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
