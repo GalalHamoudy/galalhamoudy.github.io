@@ -1,0 +1,369 @@
+/* =============================================================================
+   HTML5 CSS Reset Minified - Eric Meyer
+   ========================================================================== */
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+body {
+  line-height: 1
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+nav ul {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold
+}
+
+del {
+  text-decoration: line-through
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0
+}
+
+input,
+select {
+  vertical-align: middle
+}
+
+li {
+  list-style: none
+}
+
+
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+.mgf {
+  font-family: 'Tilt Prism', cursive !important;
+  color: #000;
+  font-weight: 800;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Acme', sans-serif !important;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font: normal 75% Arial, Helvetica, sans-serif;
+  height: 1% !important;
+}
+
+canvas {
+  display: block;
+}
+
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.All {
+  width: 100%;
+  font-size: 20px;
+  padding-top: 80px;
+}
+
+.All .container {
+  position: relative;
+}
+
+#map {
+  height: 500px;
+}
+
+.bg-light {
+  background-color: #0d6efd73 !important;
+  box-shadow: 0px 1px 7px;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navbar-light .navbar-brand {
+  color: rgba(0, 0, 0, .9);
+  font-size: 21px;
+  font-weight: 700;
+}
+
+/* --------------------------- */
+.nav_left {
+  background-color: #fff;
+  border-top-left-radius: 48px;
+  border-bottom-left-radius: 48px;
+  box-shadow: 0px 1px 7px;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #fff0;
+  border-color: transparent;
+  border-bottom: 4px solid #000;
+  color: #000;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin: 0 30px 0 40px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+.nav-link {
+  padding: 0.5rem 0.5rem;
+  color: #fff;
+}
+
+
+.search_input {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  line-height: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #0d6efd73;
+}
+
+.search_input:focus-visible {
+  outline: none;
+}
+
+input.search_input::placeholder {
+  color: #cfd2ec;
+  vertical-align: middle;
+}
+
+.search_img {
+  top: 7px;
+  right: 8px;
+}
+
+.navbar-toggler {
+  border: 3px solid #0d6efd73;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(35, 76, 203, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.Mtitle {
+  text-align: center;
+  text-decoration-line: underline;
+  text-decoration-color: #0d6efd73;
+}
+
+.me {
+  font-weight: 600;
+  font-size: 21px;
+  color: #000;
+}
+
+.card-body {
+  font-size: 20px;
+  text-align: center;
+}
+
+.card-img-top {
+  max-height: 300px;
+}
+
+.card {
+  background: #fff;
+  margin-bottom: 3px;
+  border: 1.5px solid rgba(0, 0, 0, .125);
+  border-radius: 0.4rem;
+  border-color: #000;
+  box-shadow: 0px 1px 7px;
+}
+
+hr {
+  border-color: #000;
+}
+
+.Mcard {
+  max-height: 200px;
+  margin: 50px 0px;
+}
+
+.Mcard img {
+  max-height: 200px;
+}
+
+.main-card {
+  font-size: 24px;
+  text-align: center;
+}
+
+.main-card .card-title {
+  text-decoration-line: underline;
+  text-decoration-color: #fff;
+}
+.fst-italic{
+  padding: 20px 0px;
+  color: blue;
+}
