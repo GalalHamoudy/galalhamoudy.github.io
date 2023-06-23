@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>0xM4LG4L4L</title>
+    <meta name="description"
+        content="a Blog of a very ambitious and self-motivated person, constantly looking for new and effective ways to achieve my pioneering goals">
+    <meta name="author" content="Mohamed Galal Assaf" />
+    <link href="./images/skull.png" rel="icon">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+
+
+<body>
+
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- navbar container -->
+    <nav class="navbar navbar-expand-lg py-3 ">
+        <div class="pe-lg-0 ps-lg-5 container-fluid justify-content-between">
+            <a class="navbar-brand me mgf">Mohamed Galal Assaf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="nav_left d-lg-flex align-items-center">
+                    <nav>
+                        <div class="nav d-block d-lg-flex nav-tabs" id="nav-tab" role="tablist">
+                            <a href="./index.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-house-fill"></i> Home</button></a>
+                            <a href="./About_Me.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-person-fill"></i> About Me</button></a>
+                            <a href="./Useful_resources.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-link-45deg"></i> Useful resources</button></a>
+                            <a href="./My_write_ups.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-pencil-square"></i> My write-ups</button></a>
+                            <a href="./CTF_competitions.html"><button class="nav-link active" type="button"><i
+                                        class="bi bi-bar-chart-line-fill"></i> CTF
+                                    competitions</button></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- container -->
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title mgf">Cairo ICT CTF 2022 by Cyshield</h5>
+                <p class="card-text">My write-ups to many challenges in Cairo ICT CTF 2022 by Cyshield</p>
+                <hr>
+                <div class="portfolio-wrap mt-4 mb-4">
+                    <img src="images/cyctf/1.jpg" class="img-fluid" alt="">
+                </div>
+                <hr>
+                In this CTF competition, we got 11th place after great work and speed in solving challenges
+                <hr>
+                <div class="portfolio-wrap mt-4 mb-4">
+                    <img src="images/cyctf/2.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> deviation </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CYCTF{UND3RST4ND1NG_H0W_S3H_W0RK5_1S_ESS3NTI4L}</li>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/cyctf/r1/7.jpg" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> at the first I opened the
+                        challenge file by ida pro , I realized that there are two functions:
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/1.jpg" class="img-fluid" alt="">
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the first function is
+                        simple calculator :
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/2.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the second function sounds
+                        exciting and xor function :
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/3.jpg" class="img-fluid" alt="">
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so we will put breakpoint
+                        to escape the first function
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/4.jpg" class="img-fluid" alt="">
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and set ip in second
+                        function
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/5.jpg" class="img-fluid" alt="">
+                        </div>
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> And simply the flag
+                        appeared to us
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r1/6.jpg" class="img-fluid" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+    <!-- <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> deviation </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CYCTF{UND3RST4ND1NG_H0W_S3H_W0RK5_1S_ESS3NTI4L}</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/cyctf/r1/7.jpg" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> inter </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CyCTF{R34D1NG_LLVM_1NT3RMED1AT3_R3PR3SENT4T10N_15_EZ}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/cyctf/r2/99.png" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> at the first I found the
+                        extension of file is .ll so i searched about it
+                        <code>https://fileinfo.com/extension/ll</code>
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/1.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i opened the file ,
+                        and realised that this code repeated many times :
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/2.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i checked the LLVM IR
+                        documentation <code> https://llvm.org/docs/LangRef.html</code>
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/4.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and after many search and
+                        reading , i found that :
+
+                        This code is written in LLVM IR, which is an intermediate representation language used by the
+                        LLVM
+                        compiler infrastructure. The LLVM IR is a low-level, platform-independent assembly-like language
+                        that is
+                        used as an intermediate step in the compilation process.
+
+                        This particular code fragment is performing a load and some arithmetic operations on some
+                        pointers.
+                        Here is a breakdown of what is happening:
+
+                        <br><code> %4 = load ptr, ptr %3, align 8, !dbg !20</code><br>
+                        This line loads a value from memory at the address pointed to by %3 with 8-byte alignment, and
+                        stores
+                        the result in %4.
+
+                        <br><code>%5 = getelementptr inbounds i8, ptr %4, i64 36, !dbg !20</code><br>
+                        This line computes a new pointer that points to the 36th byte after the address pointed to by
+                        %4, and
+                        stores the result in %5.
+
+                        <br><code>%6 = load i8, ptr %5, align 1, !dbg !20</code><br>
+                        This line loads a value from memory at the address pointed to by %5 with 1-byte alignment, and
+                        stores
+                        the result in %6.
+
+                        <br><code>%7 = sext i8 %6 to i32, !dbg !20</code><br>
+                        This line sign-extends %6 from an 8-bit value to a 32-bit value, and stores the result in %7.
+
+                        <br><code>%8 = sub nsw i32 %7, 31, !dbg !22</code><br>
+                        This line subtracts the value 31 from %7 with no signed overflow, and stores the result in %8.
+
+                        <br><code>%9 = icmp ne i32 %8, 20, !dbg !23</code><br>
+                        This line compares %8 with the value 20 using a "not equal" comparison, and stores the result in
+                        %9.
+
+                        <br><code>br i1 %9, label %10, label %11, !dbg !24</code><br>
+                        This line performs a conditional branch based on the value of %9. If %9 is true (i.e. not equal
+                        to 20),
+                        control is transferred to the label %10. Otherwise, control is transferred to the label %11.
+
+
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and from above i thought
+                        the 36th byte value is <code>x[36]-31=20</code> which mean
+                        <code>x[36]=51</code> which equal to "3" from ascii
+
+
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and i know the flag start
+                        with "CyCTF" so i go to first byte "c"
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/6.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and from above the value
+                        is <code>x[0]*24=1608</code> which mean <code>x[0]=67</code> which equal to
+                        "C" from ascii
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and i know the flag start
+                        with "CyCTF" so i go to second byte "y"
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                            <img src="images/cyctf/r2/5.jpg" class="img-fluid" alt="">
+                        </div>
+
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and from above the value
+                        is <code>x[1]-28=93</code> which mean <code>x[1]=121</code> which equal to
+                        "y" from ascii
+                    </li>
+
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i completed and get
+                        all the flag
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> Bipolar </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> hard</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CyCTF{C0ND1TION_B4S3D_B1NRY_ENC0D3D_57R1NGS_4_TH3_W1N}</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/cyctf/r3/99.png" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  at the first I did static analysis and opened the challenge file by Die , I realized that the file is packed:
+
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/1.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  so I searched for how to unpacked it , and i found this website <code> https://reverseengineering.stackexchange.com/questions/30545/how-do-i-unpack-a-file-protected-by-mpress </code>
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/2.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  and this was the steps to unpacked the file  :
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/3.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  so I followed the steps and unpacked the file successfully
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/4.jpg" class="img-fluid" alt="">
+                        </div>
+                        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/5.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  then i opened unpacked file with ida and opened the strings window , and i found this
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/6.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  then i started to follow this string , and went to <code> sub_140001000 </code>
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/7.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+        
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  in <code> sub_140001000 </code> i found that :
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/8.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  so i tried to take this repeated text and turn it into 0 and 1
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/9.jpg" class="img-fluid" alt="">
+                        </div>
+                        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/10.jpg" class="img-fluid" alt="">
+                        </div>
+                        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/11.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+        
+                      <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  at last i used cyberchef to turn it from binary , and i get the flag
+        
+                        <div class="portfolio-wrap mt-4 mb-4">
+                          <img src="images/cyctf/r3/12.jpg" class="img-fluid" alt="">
+                        </div>
+        
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer container -->
+    <div class="mt-5"><br></div>
+    <nav class="navbar navbar-expand-lg py-3 fixed-bottom">
+        <div class="pe-lg-0 ps-lg-5 container-fluid justify-content-between">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="nav_left d-lg-flex align-items-center">
+                    <nav>
+                        <div class="nav d-block d-lg-flex nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link" type="button">This Website Designed by Mohamed Galal</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
