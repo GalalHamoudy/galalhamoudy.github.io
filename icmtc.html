@@ -185,7 +185,7 @@
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2-3.jpg" class="img-fluid" alt=""> </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2-4.jpg" class="img-fluid" alt=""> </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i decided to try "Kerberos" and "ssd" </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i decided to try "Kerberos" and "ssh" </li>
                 </ul>
             </div>
         </div>
@@ -421,7 +421,58 @@
 
 
 
-
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> Pivoting-6 </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Digital Forensics </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> EGCERT{192.168.118.155}</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/ICMTC/D/d7.jpg" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                    the description of challenge was unclear, so i can not solve it in the competition , after competition i see this description in challenge file 
+                    <img src="images/ICMTC/SD/9.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                    and from "Pivoting-7" challenge i know the flag is "EGCERT{Workstation_2, Workstation_1, DC01}" so all i want is getting the ip of Workstation_2
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        i tried to open SYSTEM registry file using the Registry Explorer tool but i get this error
+                        <img src="images/ICMTC/SD/9-1.jpg" class="img-fluid" alt="">
+                     </li>
+                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        so i searched about this erorr 
+                        <img src="images/ICMTC/SD/9-2.jpg" class="img-fluid" alt="">
+                     </li>
+                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        i found this amazing artical here "https://cybermeisam.medium.com/blue-team-system-live-analysis-part-11-windows-user-account-forensics-ntuser-dat-495ab41393db"
+                        and his suggestion to use these tools
+                        <img src="images/ICMTC/SD/9-3.jpg" class="img-fluid" alt=""> 
+                     </li>
+                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        so i install "RegRipper3.0" and used it 
+                        <img src="images/ICMTC/SD/9-4.jpg" class="img-fluid" alt=""> 
+                     </li>
+                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        and i get the ip
+                        <img src="images/ICMTC/SD/9-5.jpg" class="img-fluid" alt=""> 
+                     </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 
 
