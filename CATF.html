@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>0xM4LG4L4L</title>
+    <meta name="description"
+        content="a Blog of a very ambitious and self-motivated person, constantly looking for new and effective ways to achieve my pioneering goals">
+    <meta name="author" content="Mohamed Galal Assaf" />
+    <link href="./images/skull.png" rel="icon">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap" rel="stylesheet">
+
+
+<body>
+
+
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- navbar container -->
+    <nav class="navbar navbar-expand-lg py-3 ">
+        <div class="pe-lg-0 ps-lg-5 container-fluid justify-content-between">
+            <a class="navbar-brand me mgf">Mohamed Galal Assaf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="nav_left d-lg-flex align-items-center">
+                    <nav>
+                        <div class="nav d-block d-lg-flex nav-tabs" id="nav-tab" role="tablist">
+                            <a href="./index.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-house-fill"></i> Home</button></a>
+                            <a href="./About_Me.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-person-fill"></i> About Me</button></a>
+                            <a href="./Useful_resources.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-link-45deg"></i> Useful resources</button></a>
+                            <a href="./My_write_ups.html"><button class="nav-link" type="button"><i
+                                        class="bi bi-pencil-square"></i> My write-ups</button></a>
+                            <a href="./CTF_competitions.html"><button class="nav-link active" type="button"><i
+                                        class="bi bi-bar-chart-line-fill"></i> CTF
+                                    competitions</button></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- container -->
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title mgf">CAT Reloaded CTF 2023 by 0xL4ugh</h5>
+                <p class="card-text">My write-ups to My reverse challenges in CAT Reloaded CTF 2023</p>
+                <hr>
+                <div class="portfolio-wrap mt-4 mb-4">
+                    <img src="images/CATF/1.jpg" class="img-fluid" alt="">
+                </div>
+                <hr>
+                In this CTF competition, I was the Author of two reverse challenges
+                <hr>
+                <div class="portfolio-wrap mt-4 mb-4">
+                    <img src="images/CATF/2.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- container -->
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> rabbits Army </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CATF{Y0U_Wi11_be_Aso1dier_s00n}</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/CATF/3.jpg" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        let's run the challenge >>>>>>> its infinite loop function!!
+                    <br>
+                    <img src="images/CATF/ra/a1.jpg" class="img-fluid" alt="">
+                </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> next step , we just do static analysis to see if it is packed or not (not packed) >>>>>>> and its Packed by UPX 
+                        <br>
+                    <img src="images/CATF/ra/1.jpg" class="img-fluid" alt="">
+                    <br>
+                    
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> now , let's unpacked the challenge 
+                        <br>
+                        <img src="images/CATF/ra/2.jpg" class="img-fluid" alt="">
+                     </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i><code> if you use Flare VM you will get this error, and this due to old upx version , so you should download latest upx version </code>
+                        <br>
+                        <img src="images/CATF/ra/3.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> let's use our ida , In Main function there is two functions <br>
+                        <img src="images/CATF/ra/a2.jpg" class="img-fluid" alt="">
+                     </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> The first function is what we see in running program <br>
+                        <img src="images/CATF/ra/a3.jpg" class="img-fluid" alt=""> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>  But this second function will not execute 
+                        <br>
+                        <img src="images/CATF/ra/a4.jpg" class="img-fluid" alt=""> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> so , to solve the challenge let's use ida debugger and add break point in our sentence " Hi :YOU: BYE" or before The first function  <br>
+                        <img src="images/CATF/ra/a5.jpg" class="img-fluid" alt=""> 
+                        <br>
+                        <img src="images/CATF/ra/a6.jpg" class="img-fluid" alt=""> 
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> And set IP at the second function and jump to it 
+                        <br>
+                        <img src="images/CATF/ra/a7.jpg" class="img-fluid" alt=""> 
+                     </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and after that , Simply run the program, and you will get the flag 
+                        <br>
+                        <img src="images/CATF/ra/a8.jpg" class="img-fluid" alt=""> </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-group" style="text-align: left;">
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Name : <i
+                                    class="bi bi-activity"></i> Lazy </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Category: <i
+                                    class="bi bi-activity"></i> Reverse </li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Level: <i
+                                    class="bi bi-activity"></i> Medium</li>
+                            <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> Flag : <i
+                                    class="bi bi-activity"></i> CATF{Brav00_Brav00_}</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="images/CATF/4.jpg" class="img-fluid" alt="">
+                <h5 class="card-title mgf">SOLUTION</h5>
+                <ul class="list-group" style="text-align: left;">
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> we just do static analysis to see if it packed or not (not packed) 
+                        <br>
+                        <img src="images/CATF/la/1.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> And let's check the challenge's resource: ( by using resource hacker )
+                        <br>
+                        <img src="images/CATF/la/4.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> we next do dynamic analysis and see its behavior – simply run it :
+                        <br>
+                        <img src="images/CATF/la/2.jpg" class="img-fluid" alt=""> 
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        It look like a flag in binary format , let's check it using cyberchef : Ok , its fake flag 
+                        But now we know that the challenge , require username and password 
+                        And from the static analysis we know the username is "nasserae"
+                        
+                        <br>
+                        <img src="images/CATF/la/3.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> now let's see the advanced static analysis using ida :
+                        First , strings window : There are username and 2 passwords ! not one !
+                        So let's go to it 
+                        <br>
+                        <img src="images/CATF/la/5.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> from reversing When the password (20 characters) we will see the "P@ssw0rd" 
+                        <br>
+                        <img src="images/CATF/la/6.jpg" class="img-fluid" alt="">
+                        <br>
+                        <img src="images/CATF/la/98.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        let's try any random password (but 20 characters)
+                        <br>
+                        <img src="images/CATF/la/7.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> now let's try any value for second password :
+                        <br>
+                        <img src="images/CATF/la/8.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> And use cyberchef :
+                        <br>
+                        <img src="images/CATF/la/9.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i>from reversing >>>> the P@ssw0rd must be (20 characters) and its value "00000000000000000000" 
+                        <br>
+                        <img src="images/CATF/la/99.jpg" class="img-fluid" alt="">
+                        <br>
+                        <img src="images/CATF/la/97.jpg" class="img-fluid" alt="">
+                     </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and if you try to enter P@ssw0rd less than (20 characters) you will get "Wrong Password" and you will see the right P@ssw0rd !!! 
+                        <br>
+                        <img src="images/CATF/la/96.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> now lets use "00000000000000000000"
+                    
+                        <br>
+                        <img src="images/CATF/la/95.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and we get the flag 
+                        <br>
+                        <img src="images/CATF/la/94.jpg" class="img-fluid" alt="">
+                    </li>
+                    <!-- <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> and there is another way to solve the challenge , just open the challenge with ida and take the binary values 
+                        <br>
+                        <img src="images/CATF/la/80.jpg" class="img-fluid" alt="">
+                    </li>
+                    <li class="list-group-item"><i class="bi bi-arrow-right-square-fill"></i> 
+                        and use cyberchef to XOR Brute Force by using the binary values and "CATF" part from the flag
+                        <br>
+                        <img src="images/CATF/la/81.jpg" class="img-fluid" alt="">
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer container -->
+    <div class="mt-5"><br></div>
+    <nav class="navbar navbar-expand-lg py-3 fixed-bottom">
+        <div class="pe-lg-0 ps-lg-5 container-fluid justify-content-between">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <div class="nav_left d-lg-flex align-items-center">
+                    <nav>
+                        <div class="nav d-block d-lg-flex nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link" type="button">This Website Designed by Mohamed Galal</button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
