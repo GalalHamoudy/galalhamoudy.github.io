@@ -151,7 +151,8 @@ hr {
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
-  padding: 0
+  padding: 0;
+  opacity: 1
 }
 
 input,
@@ -170,10 +171,10 @@ li {
 
 /* ---- base ---- */
 .mgf {
-  font-family: 'Lumanosimo', cursive !important;
+  font-family: "SUSE", sans-serif !important;
   color: #fff;
   font-weight: 800;
-  text-shadow: #fff 1px 1px;
+  /* text-shadow: #fff 1px 1px; */
 }
 
 html,
@@ -301,6 +302,11 @@ input.search_input::placeholder {
   right: 8px;
 }
 
+.glal{
+      padding: 0rem; 
+      border: 0px; 
+      border-radius: 0rem; 
+}
 .navbar-toggler {
   border: 3px solid #0d6efd73;
 }
@@ -322,9 +328,10 @@ input.search_input::placeholder {
 .me {
   font-weight: 600;
   font-size: 21px;
-  color: #000;
-  font-family: 'Bungee Spice', cursive;
+  color: #fff;
+  font-family: "SUSE", sans-serif;
 }
+
 
 .card-body {
   font-size: 20px;
@@ -338,12 +345,21 @@ input.search_input::placeholder {
 
 .card {
   margin-bottom: 3px;
-  border: 1.5px solid rgba(0, 0, 0, .125);
+  /* border: 1.5px solid rgba(0, 0, 0, .125); */
   border-radius: 0.4rem;
   border-color: #000;
   box-shadow: 0px 1px 7px;
-  background-color: #1a120bd9;
-  /* background: url(../images/update/11.jpg) no-repeat fixed center; */
+  /* background-color: #1a120bd9; */
+  background: url(../images/update/111.png) no-repeat fixed center;
+  background-size: cover;
+}
+
+.cardx {
+  margin: 8px 0px;
+  border-radius: 0.4rem;
+  border-color: #000;
+  /* background-color: #1a120bd9; */
+  background: url(../images/update/11.jpg) no-repeat fixed center;
   background-size: cover;
 }
 
